@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#hero {
+  background: linear-gradient(to right, #1f2937, #4b5563);
+  color: white;
+  padding: 100px 20px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+button {
+  background-color: #ff914d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ff7518;
+}
+
+#journey-map ul {
+  list-style: none;
+  padding: 0;
+}
+
+#journey-map li {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 20px auto;
+  max-width: 600px;
+  color: #555;
+}
