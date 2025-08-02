@@ -1,18 +1,38 @@
-document.getElementById("startJourneyBtn").onclick = () => {
-  document.getElementById("why-maspala").scrollIntoView({ behavior: 'smooth' });
-};
+// Smooth scroll to the "Why Maspala" section when button is clicked
+document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.getElementById("startJourneyBtn");
+  const enrollBtn = document.getElementById("enrollBtn");
+  const sections = document.querySelectorAll("section");
 
-document.getElementById("enrollBtn").onclick = () => {
-  alert("Booking feature coming soon. Stay tuned!");
-};
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      const target = document.getElementById("why-maspala");
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
+  if (enrollBtn) {
+    enrollBtn.addEventListener("click", () => {
+      alert("🚀 Booking feature coming soon. Stay tuned!");
+    });
+  }
 
-section.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
+  // Scroll-triggered fade-in animation for sections
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          observer.unobserve(entry.target); // Trigger once
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+});
