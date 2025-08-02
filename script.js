@@ -101,3 +101,100 @@ document.addEventListener("mousemove", e => {
     icon.style.transform = `translate(${x}px, ${y}px) rotateY(${x}px) rotateX(${y}px)`;
   });
 });
+
+// === TYPEWRITER TEXT EFFECT ===
+const typeTargets = document.querySelectorAll(".typewriter");
+typeTargets.forEach(el => {
+  const text = el.getAttribute("data-text");
+  let i = 0;
+  const speed = parseInt(el.getAttribute("data-speed")) || 80;
+
+  const type = () => {
+    if (i < text.length) {
+      el.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    }
+  };
+
+  el.innerHTML = "";
+  type();
+});
+
+// === NEON CURSOR TRAIL ===
+const trailColors = ["#00fff7", "#00ffe0", "#00ffd0"];
+let index = 0;
+
+document.addEventListener("mousemove", (e) => {
+  const trail = document.createElement("div");
+  trail.className = "cursor-trail";
+  trail.style.left = `${e.clientX}px`;
+  trail.style.top = `${e.clientY}px`;
+  trail.style.backgroundColor = trailColors[index % trailColors.length];
+  index++;
+
+  document.body.appendChild(trail);
+  setTimeout(() => trail.remove(), 500);
+});
+
+// === PARALLAX BACKGROUND EFFECT ===
+document.addEventListener("mousemove", e => {
+  const layers = document.querySelectorAll(".parallax-layer");
+  layers.forEach(layer => {
+    const speed = layer.getAttribute("data-speed") || 5;
+    const x = (window.innerWidth / 2 - e.pageX) / 100 * speed;
+    const y = (window.innerHeight / 2 - e.pageY) / 100 * speed;
+    layer.style.transform = `translate(${x}px, ${y}px)`;
+  });
+});
+
+// === FLOATING DOTS BACKGROUND ===
+const canvas = document.createElement("canvas");
+canvas.id = "background-dots";
+document.body.appendChild(canvas);
+const ctx = canvas.getContext("2d");
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+let particles = [];
+
+for (let i = 0; i < 50; i++) {
+  particles.push({
+    x: Math.random() * width,
+    y: Math.random() * height,
+    vx: (Math.random() - 0.5) * 0.5,
+    vy: (Math.random() - 0.5) * 0.5,
+    radius: Math.random() * 2 + 1
+  });
+}
+
+function animateDots() {
+  ctx.clearRect(0, 0, width, height);
+  for (let p of particles) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+    ctx.fillStyle = "#00ffee";
+    ctx.fill();
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if (p.x < 0 || p.x > width) p.vx *= -1;
+    if (p.y < 0 || p.y > height) p.vy *= -1;
+  }
+  requestAnimationFrame(animateDots);
+}
+animateDots();
+window.addEventListener("resize", () => {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+});
+
+// === BLUR REVEAL MENU EFFECT ===
+const menu = document.querySelector(".menu-blur");
+if (menu) {
+  menu.addEventListener("mouseenter", () => {
+    menu.classList.add("menu-active");
+  });
+  menu.addEventListener("mouseleave", () => {
+    menu.classList.remove("menu-active");
+  });
+}
