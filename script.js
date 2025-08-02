@@ -1,100 +1,43 @@
-// Smooth scroll to the "Why Maspala" section when button is clicked
-document.addEventListener("DOMContentLoaded", () => {
-  const startBtn = document.getElementById("startJourneyBtn");
-  const enrollBtn = document.getElementById("enrollBtn");
-  const sections = document.querySelectorAll("section");
-
-  if (startBtn) {
-    startBtn.addEventListener("click", () => {
-      const target = document.getElementById("why-maspala");
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  }
-
-  if (enrollBtn) {
-    enrollBtn.addEventListener("click", () => {
-      alert("🚀 Booking feature coming soon. Stay tuned!");
-    });
-  }
-
-  // Scroll-triggered fade-in animation for sections
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
-          observer.unobserve(entry.target); // Trigger once
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
+// Smooth scrolling (for anchor links)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.onclick = function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 });
 
-// Optional button actions (for pages like index.html)
-const startBtn = document.getElementById("startJourneyBtn");
-const enrollBtn = document.getElementById("enrollBtn");
-
-if (startBtn) {
-  startBtn.onclick = () => {
-    const target = document.getElementById("why-maspala");
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
-  };
-}
-
-if (enrollBtn) {
-  enrollBtn.onclick = () => {
-    alert("Booking feature coming soon. Stay tuned!");
-  };
-}
-
-// Scroll fade-in animation
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.1,
-  }
-);
-
-// Apply to all sections
-document.querySelectorAll("section").forEach(section => {
-  observer.observe(section);
-});
-
-// Smooth scroll for hero button
-document.getElementById("startJourneyBtn").onclick = () => {
-  document.getElementById("why-maspala").scrollIntoView({ behavior: 'smooth' });
-};
-
-// Alert for enroll button
-document.getElementById("enrollBtn").onclick = () => {
-  alert("Booking feature coming soon. Stay tuned!");
-};
-
-// Futuristic fade-in animation on scroll
+// Fade-in elements on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
+      entry.target.classList.add("visible");
     }
   });
-}, {
-  threshold: 0.15
 });
 
-document.querySelectorAll('section').forEach(section => {
-  observer.observe(section);
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Ripple effect on buttons
+document.querySelectorAll('button, .btn').forEach(button => {
+  button.addEventListener('click', function (e) {
+    const circle = document.createElement("span");
+    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const radius = diameter / 2;
+
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${e.clientX - button.offsetLeft - radius}px`;
+    circle.style.top = `${e.clientY - button.offsetTop - radius}px`;
+    circle.classList.add("ripple");
+
+    const ripple = button.getElementsByClassName("ripple")[0];
+
+    if (ripple) {
+      ripple.remove();
+    }
+
+    button.appendChild(circle);
+  });
 });
