@@ -73,3 +73,28 @@ const observer = new IntersectionObserver(
 document.querySelectorAll("section").forEach(section => {
   observer.observe(section);
 });
+
+// Smooth scroll for hero button
+document.getElementById("startJourneyBtn").onclick = () => {
+  document.getElementById("why-maspala").scrollIntoView({ behavior: 'smooth' });
+};
+
+// Alert for enroll button
+document.getElementById("enrollBtn").onclick = () => {
+  alert("Booking feature coming soon. Stay tuned!");
+};
+
+// Futuristic fade-in animation on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+document.querySelectorAll('section').forEach(section => {
+  observer.observe(section);
+});
