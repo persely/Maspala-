@@ -113,3 +113,15 @@ section.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
+
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
