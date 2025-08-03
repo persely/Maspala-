@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="background-dots"></canvas>
 
-  <header class="header">
-    <div class="logo">Maspala 🚗</div>
+  <header class="header glass-box fade-in parallax-layer" data-speed="2">
+    <div class="logo floating-icon" data-speed="3">Maspala <span class="icon">🚗</span></div>
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -19,27 +20,57 @@
     </nav>
   </header>
 
-  <section class="courses-hero">
-    <h1>Our Driving Courses</h1>
-    <p>We offer tailored lessons for all experience levels — from beginner to advanced.</p>
+  <section class="courses-hero glass-card neon-frame fade-target reveal">
+    <h1>
+      <span class="typewriter" data-text="Our Driving Courses" data-speed="55"></span>
+    </h1>
+    <p>Explore our range of courses designed for every driver’s journey.</p>
   </section>
 
-  <section class="course-list">
-    <div class="course-card">
-      <h3>🚦 Beginner Driving</h3>
-      <p>Perfect for new drivers. Covers the basics with extra patience.</p>
+  <section class="courses-list glass-card fade-target reveal">
+    <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="2">
+      <h2>Beginner Course <span class="icon">🛣️</span></h2>
+      <ul>
+        <li>Step-by-step instruction</li>
+        <li>Vehicle control basics</li>
+        <li>Traffic laws &amp; safety</li>
+      </ul>
+      <button class="btn btn-glow glow-on-hover ripple pulse-hover">Enroll Now</button>
     </div>
-    <div class="course-card">
-      <h3>🛣️ Highway Practice</h3>
-      <p>Learn confidence in fast traffic and high-speed zones.</p>
+
+    <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="3">
+      <h2>Intermediate Course <span class="icon">🔄</span></h2>
+      <ul>
+        <li>City &amp; highway driving</li>
+        <li>Defensive techniques</li>
+        <li>Complex traffic scenarios</li>
+      </ul>
+      <button class="btn btn-glow glow-on-hover ripple pulse-hover">Enroll Now</button>
     </div>
-    <div class="course-card">
-      <h3>🅿️ Parallel Parking Mastery</h3>
-      <p>We’ll help you get this tricky skill right — calmly and clearly.</p>
+
+    <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="4">
+      <h2>Advanced Course <span class="icon">🏁</span></h2>
+      <ul>
+        <li>Night driving</li>
+        <li>Adverse weather skills</li>
+        <li>Emergency maneuvers</li>
+      </ul>
+      <button class="btn btn-glow glow-on-hover ripple pulse-hover">Enroll Now</button>
     </div>
   </section>
 
-  <footer class="footer">
+  <section class="specials glass-card fade-target reveal">
+    <h2>
+      <span class="typewriter" data-text="Specialty Add-ons" data-speed="60"></span>
+    </h2>
+    <ul>
+      <li class="pulse-hover">Parallel Parking Mastery</li>
+      <li class="pulse-hover">Eco-Driving Techniques</li>
+      <li class="pulse-hover">Test Prep Crash Course</li>
+    </ul>
+  </section>
+
+  <footer class="footer glass-card fade-in menu-blur">
     <p>© 2025 Maspala Driving School. All rights reserved.</p>
   </footer>
 
