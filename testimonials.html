@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="background-dots"></canvas>
 
-  <header class="header">
-    <div class="logo">Maspala 🚗</div>
+  <header class="header glass-box fade-in parallax-layer" data-speed="2">
+    <div class="logo floating-icon" data-speed="3">Maspala <span class="icon">🚗</span></div>
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -19,27 +20,44 @@
     </nav>
   </header>
 
-  <section class="testimonials-hero">
-    <h1>What Our Students Say</h1>
-    <p>Real stories from real drivers who found their confidence with Maspala.</p>
+  <section class="testimonials-hero glass-card neon-frame fade-target reveal">
+    <h1>
+      <span class="typewriter" data-text="What Our Students Say" data-speed="55"></span>
+    </h1>
+    <p>Your journey to confidence starts here—read real stories from Maspala graduates.</p>
   </section>
 
-  <section class="testimonial-cards">
-    <div class="testimonial">
-      <p>"I used to panic behind the wheel — now I feel calm and in control. Thank you Maspala!"</p>
-      <span>— Amina K.</span>
+  <section class="testimonials-list glass-card fade-target reveal">
+    <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="2">
+      <p>"My instructor at Maspala was patient and understanding. Thanks to them, I passed my driving test on the first try!"</p>
+      <span>- Jordan F.</span>
     </div>
-    <div class="testimonial">
-      <p>"The instructor was patient, funny, and helped me pass my test on the first try."</p>
-      <span>— Lebo M.</span>
+    <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="3">
+      <p>"The lessons were clear, flexible, and fun. I learned not just to drive, but to love being on the road."</p>
+      <span>- Casey L.</span>
     </div>
-    <div class="testimonial">
-      <p>"From zero experience to passing confidently in 3 weeks. Unreal!"</p>
-      <span>— Tshepo D.</span>
+    <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="4">
+      <p>"I was nervous at first, but Maspala gave me the confidence and skills I needed to succeed."</p>
+      <span>- Riley S.</span>
     </div>
   </section>
 
-  <footer class="footer">
+  <section class="share-experience glass-card fade-target reveal">
+    <h2>
+      <span class="typewriter" data-text="Share Your Experience" data-speed="65"></span>
+    </h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required class="glass-box"/>
+
+      <label for="testimonial">Your Testimonial:</label>
+      <textarea id="testimonial" rows="4" required class="glass-box"></textarea>
+
+      <button type="submit" class="btn btn-glow glow-on-hover ripple pulse-hover">Submit</button>
+    </form>
+  </section>
+
+  <footer class="footer glass-card fade-in menu-blur">
     <p>© 2025 Maspala Driving School. All rights reserved.</p>
   </footer>
 
