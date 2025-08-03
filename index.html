@@ -7,48 +7,62 @@
   <link rel="stylesheet" href="style.css" />
 </head>
  <body>
-  <header class="glass-card fade-target">
-    <h1 class="hero-title">Welcome to Maspala Driving School</h1>
-    <p class="subtitle">Unlock the road to your future — confidently, consciously, and stylishly.</p>
-    <button class="ripple pulse-hover" id="startJourneyBtn">Start Your Journey</button>
+ <canvas id="background-dots"></canvas>
+  
+  <header class="header glass-box fade-in parallax-layer" data-speed="2">
+    <div class="logo floating-icon" data-speed="3">Maspala <span class="icon">🚗</span></div>
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
+  
+  <main>
+    <section class="hero glass-card neon-frame fade-target reveal">
+      <h1>
+        <span class="typewriter" data-text="Master The Road With Confidence." data-speed="60"></span>
+      </h1>
+      <p>Learn to drive with patience, professionalism, and a personal touch at Maspala Driving School.</p>
+      <button class="btn btn-glow glow-on-hover ripple pulse-hover">Get Started</button>
+    </section>
 
-  <section id="why-maspala" class="glass-card fade-target">
-    <h2>Why Choose Maspala?</h2>
-    <p>Our futuristic driving school doesn’t just teach — it upgrades your mindset, vision, and confidence behind the wheel.</p>
-    <ul>
-      <li>🚗 VR-Enhanced Driving Simulators</li>
-      <li>🚦 AI-Powered Traffic Lessons</li>
-      <li>🧠 Confidence Coaching & Psychology of Driving</li>
-    </ul>
-  </section>
+    <section class="features glass-card fade-target reveal">
+      <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="2">
+        <h2><span class="icon">🛡️</span> Safety First</h2>
+        <p>Every lesson is built on a foundation of safety and responsibility.</p>
+      </div>
+      <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="3">
+        <h2><span class="icon">🧑‍🎓</span> For All Levels</h2>
+        <p>Beginner, nervous, or advanced—our instructors adapt to you.</p>
+      </div>
+      <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="4">
+        <h2><span class="icon">⏰</span> Flexible Scheduling</h2>
+        <p>We work with your calendar. Weekend and evening lessons available.</p>
+      </div>
+    </section>
 
-  <section class="card-grid fade-target">
-    <div class="glass-card pulse-hover">
-      <h3>Beginner Course</h3>
-      <p>For first-timers. Calm, supportive, interactive sessions.</p>
-      <button class="ripple">Explore</button>
-    </div>
-    <div class="glass-card pulse-hover">
-      <h3>Advanced Driving</h3>
-      <p>Refine your skills with AI assessment and VR hazard perception.</p>
-      <button class="ripple">Explore</button>
-    </div>
-    <div class="glass-card pulse-hover">
-      <h3>Code 8 & Code 10 Prep</h3>
-      <p>All you need to master theory, parking, and road tests.</p>
-      <button class="ripple">Explore</button>
-    </div>
-  </section>
+    <section class="testimonials glass-card neon-frame fade-target reveal">
+      <h2>
+        <span class="typewriter" data-text="Student Stories" data-speed="80"></span>
+      </h2>
+      <div class="card glass-card fade-in pulse-hover">
+        <p>"I was so nervous, but my instructor made driving feel natural and safe."</p>
+        <span>- Alex P.</span>
+      </div>
+      <div class="card glass-card fade-in pulse-hover">
+        <p>"Scheduling was easy and flexible, and I passed my test first try!"</p>
+        <span>- Jamie R.</span>
+      </div>
+    </section>
+  </main>
 
-  <section class="glass-card fade-target" id="testimonials">
-    <h2>Student Testimonials</h2>
-    <p>"Maspala changed how I see driving. I feel like I’ve leveled up in life." — Thando M.</p>
-  </section>
-
-  <footer class="glass-card fade-target">
-    <p>🚀 Maspala Driving School — The Future of Driving Starts Now</p>
-    <button id="enrollBtn" class="ripple">Book Your Slot</button>
+  <footer class="footer glass-card fade-in menu-blur">
+    <p>© 2025 Maspala Driving School. All rights reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
