@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <canvas id="background-dots"></canvas>
 
-  <header class="header">
-    <div class="logo">Maspala 🚗</div>
+  <header class="header glass-box fade-in parallax-layer" data-speed="2">
+    <div class="logo floating-icon" data-speed="3">Maspala <span class="icon">🚗</span></div>
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -19,27 +20,29 @@
     </nav>
   </header>
 
-  <section class="contact-hero">
-    <h1>Contact Maspala</h1>
+  <section class="contact-hero glass-card neon-frame fade-target reveal">
+    <h1>
+      <span class="typewriter" data-text="Contact Maspala" data-speed="60"></span>
+    </h1>
     <p>Let’s get you on the road. Send us a message below.</p>
   </section>
 
-  <section class="contact-form">
+  <section class="contact-form glass-card fade-target reveal">
     <form>
       <label for="name">Name:</label>
-      <input type="text" id="name" required />
-
+      <input type="text" id="name" required class="glass-box"/>
+      
       <label for="email">Email:</label>
-      <input type="email" id="email" required />
-
+      <input type="email" id="email" required class="glass-box"/>
+      
       <label for="message">Message:</label>
-      <textarea id="message" rows="5" required></textarea>
-
-      <button type="submit">Send Message</button>
+      <textarea id="message" rows="5" required class="glass-box"></textarea>
+      
+      <button type="submit" class="btn btn-glow glow-on-hover ripple pulse-hover">Send Message</button>
     </form>
   </section>
 
-  <footer class="footer">
+  <footer class="footer glass-card fade-in menu-blur">
     <p>© 2025 Maspala Driving School. All rights reserved.</p>
   </footer>
 
