@@ -242,3 +242,41 @@ document.querySelectorAll('.pulse-hover').forEach(el => {
     el.classList.remove('pulse');
   });
 });
+
+// Button ripple + glow
+document.querySelectorAll('.glass-card, .btn-glow').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    el.style.setProperty('--x', `${x}px`);
+    el.style.setProperty('--y', `${y}px`);
+  });
+});
+
+// Fade on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-target').forEach(el => {
+  observer.observe(el);
+});
+
+// Ripple click
+document.querySelectorAll('.ripple').forEach(button => {
+  button.addEventListener('click', function (e) {
+    const circle = document.createElement('span');
+    circle.classList.add('ripple-effect');
+    const rect = this.getBoundingClientRect();
+    circle.style.left = `${e.clientX - rect.left}px`;
+    circle.style.top = `${e.clientY - rect.top}px`;
+    this.appendChild(circle);
+
+    setTimeout(() => circle.remove(), 600);
+  });
+});
