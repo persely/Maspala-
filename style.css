@@ -425,3 +425,106 @@ body {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+:root {
+  --glow-color: #00ffae;
+}
+
+/* Glass effect card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 40px rgba(0, 255, 174, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Button Glow */
+.btn-glow {
+  background: none;
+  border: 2px solid var(--glow-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: var(--glow-color);
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background: var(--glow-color);
+  opacity: 0.1;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn-glow:hover::before {
+  width: 200px;
+  height: 200px;
+}
+
+/* Ripple Effect */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: scale(0);
+  animation: rippleAnim 0.6s linear;
+}
+
+@keyframes rippleAnim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Hover pulse */
+.pulse-hover:hover {
+  animation: pulseEffect 0.6s ease-in-out;
+}
+
+@keyframes pulseEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Fade In Scroll */
+.fade-target {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Neon Section Border */
+.neon-frame {
+  border: 2px solid var(--glow-color);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px var(--glow-color);
+}
