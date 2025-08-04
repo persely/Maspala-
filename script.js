@@ -84,12 +84,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }, index * 300);
   });
 
-  document.querySelectorAll("blockquote").forEach(quote => {
-    quote.addEventListener("mouseenter", () => {
-      quote.style.color = "gold";
-    });
-    quote.addEventListener("mouseleave", () => {
-      quote.style.color = "#e5e5e5";
-    });
+  document.querySelectorAll('.glass-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const x = e.offsetX;
+    const y = e.offsetY;
+    const glow = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.3), transparent 60%)`;
+    card.style.backgroundImage = glow;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.backgroundImage = 'none';
   });
 });
