@@ -74,3 +74,22 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll("section");
+
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.add("animated");
+    }, index * 300);
+  });
+
+  document.querySelectorAll("blockquote").forEach(quote => {
+    quote.addEventListener("mouseenter", () => {
+      quote.style.color = "gold";
+    });
+    quote.addEventListener("mouseleave", () => {
+      quote.style.color = "#e5e5e5";
+    });
+  });
+});
