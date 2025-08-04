@@ -1,62 +1,65 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Maspala</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Maspala</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="about.css" />
+  <script defer src="about.js"></script>
 </head>
-<body class="glass about-page">
-  <header class="navbar">
-    <a href="index.html" class="nav-icon home-icon" title="Home"></a>
-    <a href="about.html" class="nav-icon about-icon active" title="About"></a>
-    <a href="courses.html" class="nav-icon courses-icon" title="Courses"></a>
-    <a href="enroll.html" class="nav-icon enroll-icon" title="Enroll"></a>
-    <a href="testimonials.html" class="nav-icon testimonials-icon" title="Voices"></a>
-    <a href="faq.html" class="nav-icon faq-icon" title="Help"></a>
-    <a href="contact.html" class="nav-icon contact-icon" title="Contact"></a>
+<body>
+  <header class="glass-header">
+    <nav>
+      <ul class="nav-icons">
+        <li><a href="index.html"><img src="icons/home.svg" alt="Home"></a></li>
+        <li><a href="about.html" class="active"><img src="icons/info.svg" alt="About"></a></li>
+        <li><a href="services.html"><img src="icons/services.svg" alt="Services"></a></li>
+        <li><a href="contact.html"><img src="icons/contact.svg" alt="Contact"></a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="hero fade-in">
-    <h1 class="golden-glow">Drive to Arrive</h1>
-    <p class="intro-statement">
-      At Maspala, we don’t just teach driving — <strong>we build confidence, trust, and survival on the road</strong>.
-    </p>
-  </section>
-
-  <section class="content-section fade-in">
-    <div class="content-block glass-soft">
-      <h2 class="section-title">Our Mission</h2>
+  <main class="about-container">
+    <section class="about-glass-card">
+      <h1>Our Story</h1>
       <p>
-        We exist to protect the youth, support the future, and ensure no parent lives in fear of losing their child to the road.
-        We respond to the South African crisis — <strong>potholes, reckless drivers, and fear</strong> — with structure and precision.
+        We are Maspala — a sanctuary of trust on South African roads. Born from the cracks and chaos of potholes, reckless drivers, and lost lives, Maspala was founded with one vow: <strong>Drive to Arrive</strong>.
       </p>
-    </div>
+      <p>
+        In a country where traffic signs fade and road rage roars, our purpose became clear. We don't just teach driving. <strong>We sculpt confidence</strong>. We rewire fear into focus. Our mission is to earn the trust of every parent who silently prays their child returns safe.
+      </p>
+      <p>
+        We’re more than instructors. We are guardians of the journey. We train teens, empower women, calm elders — with a quiet elegance and expert precision that’s unmatched.
+      </p>
+    </section>
 
-    <div class="content-block glass-soft">
-      <h2 class="section-title">What Makes Us Different?</h2>
-      <ul class="gold-bullets">
-        <li>We use AI-assisted safe driving simulators</li>
-        <li>Trained instructors with trauma-response skills</li>
-        <li>Luxury learning experience with advanced tech vehicles</li>
-        <li>Parents get live updates + progress reports</li>
-        <li>We coach confidence and situational awareness</li>
+    <section class="values-glass-card">
+      <h2>Our Values</h2>
+      <ul>
+        <li>🛡️ <strong>Safety</strong> — Every life matters. Every road deserves caution.</li>
+        <li>🌟 <strong>Confidence</strong> — We don’t just teach. We elevate self-belief.</li>
+        <li>🤝 <strong>Trust</strong> — We earn the trust of parents and protect their peace of mind.</li>
+        <li>💎 <strong>Luxury Experience</strong> — Smooth, clean, dignified — like a Rolls-Royce ride.</li>
+        <li>🇿🇦 <strong>Local Relevance</strong> — We drive through real South African challenges, together.</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="content-block golden-glow glass-soft">
-      <h2 class="section-title">Why We Say “Drive to Arrive”</h2>
-      <p>
-        Because it's not just about passing a test. It's about coming home alive. It’s about <strong>trust</strong>, <strong>peace of mind</strong>,
-        and building a new generation of world-class drivers from South Africa to the world.
-      </p>
-    </div>
-  </section>
+    <section class="testimonials-glass-card">
+      <h2>Real Stories</h2>
+      <blockquote>
+        “I used to panic at intersections. Now, I drive with purpose. Maspala gave me my freedom back.”
+        <footer>— Naledi M., Limpopo</footer>
+      </blockquote>
+      <blockquote>
+        “My parents never had to worry. Maspala treated me like royalty from day one.”
+        <footer>— Sipho R., Polokwane</footer>
+      </blockquote>
+    </section>
+  </main>
 
-  <footer class="footer glass-soft">
-    <p>&copy; 2025 Maspala Driving Academy | Built for trust, driven by care.</p>
+  <footer class="glass-footer">
+    <p>&copy; 2025 Maspala Driving School. All rights reserved.</p>
   </footer>
 </body>
 </html>
