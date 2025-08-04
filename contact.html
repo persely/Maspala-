@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Maspala Driving School</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maspala | Contact</title>
+    <!-- Shared Head Content -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Animated Background Canvas -->
-  <canvas id="background-dots"></canvas>
+    <!-- Page Loader -->
+    <!-- Navigation -->
 
-  <!-- Header -->
-  <header class="header glass-box parallax-layer" data-speed="2">
-    <div class="logo floating-icon" data-speed="3">
-      Maspala <span class="icon">🚗</span>
-    </div>
-       <nav>
-  <div class="logo">Maspala 🚗</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="courses.html">Courses</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="particles" id="particles-js"></div>
+        <div class="container">
+            <h1 class="hero-title">Let's Create Something Iconic</h1>
+            <p class="hero-subtitle">Our concierge team awaits your inquiry</p>
+        </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero-section glass-card neon-frame fade-in">
-    <h1 class="typewriter" data-text="Contact Maspala Driving School" data-speed="50"></h1>
-    <p>Let’s get you on the road. Send us a message below.</p>
-  </section>
+    <!-- Contact Grid -->
+    <section class="contact-grid">
+        <div class="container">
+            <div class="grid-container">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="gold-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required>
+                            <i class="fas fa-user gold-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                            <i class="fas fa-envelope gold-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                            <i class="fas fa-pen gold-icon"></i>
+                        </div>
+                        <button type="submit" class="btn-gold">Send Message</button>
+                    </form>
+                </div>
 
-  <!-- Contact Form -->
-  <section class="contact-form glass-card reveal fade-in">
-    <form>
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required class="glass-input" />
-      </div>
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-phone gold-icon"></i>
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope gold-icon"></i>
+                        <h3>Email</h3>
+                        <p>concierge@maspala.com</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt gold-icon"></i>
+                        <h3>Headquarters</h3>
+                        <p>18 Rue du Luxe, Paris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" required class="glass-input" />
-      </div>
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="gold-map" id="map"></div>
+    </section>
 
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" rows="5" required class="glass-input"></textarea>
-      </div>
-
-      <button type="submit" class="btn btn-glow glow-on-hover ripple">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer glass-card fade-in">
-    <p>© 2025 Maspala Driving School. All rights reserved.</p>
-  </footer>
-
-  <!-- JS -->
-  <script src="script.js"></script>
+    <!-- Footer -->
 </body>
 </html>
