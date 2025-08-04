@@ -108,3 +108,42 @@ body {
   font-size: 0.9rem;
   opacity: 0.8;
 }
+
+/* For fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cursor trail */
+#cursor-trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 12px gold;
+  transition: transform 0.1s ease;
+}
+
+/* Button hover glow */
+.glow-btn {
+  transition: all 0.3s ease;
+}
+.glow-btn.hovered {
+  box-shadow: 0 0 20px 5px gold;
+  transform: scale(1.05);
+}
+
+/* On-load animation starter */
+body.loaded .fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
