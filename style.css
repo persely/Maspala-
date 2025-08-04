@@ -47,4 +47,27 @@ section.fade-in { opacity: 1; transform: translateY(0); }
 /* ===== FOOTER ===== */ footer { padding: 2rem; text-align: center; border-top: 1px solid var(--border-glass); background: rgba(0, 0, 0, 0.6); font-size: 0.9rem; opacity: 0.7; }
 
 /* More classes for car icons, feature cards, course breakdowns etc. will be layered next */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 10px 20px;
+  color: white;
+}
 
+.nav-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
