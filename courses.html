@@ -1,89 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Courses | Maspala Driving School</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maspala | Elite Courses</title>
+    <!-- Shared Head Content (same as index.html) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="background-dots"></canvas>
+    <!-- Page Loader (same as index.html) -->
+    <!-- Navigation (same as index.html) -->
 
-  <!-- HEADER -->
-  <header class="header glass-box fade-in parallax-layer" data-speed="2">
-    <div class="logo floating-icon" data-speed="3">
-      Maspala <span class="icon">🚗</span>
-    </div>
-        <nav>
-  <div class="logo">Maspala 🚗</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="courses.html">Courses</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero courses-hero">
+        <div class="hero-overlay"></div>
+        <div class="particles" id="particles-js"></div>
+        <div class="container">
+            <h1 class="hero-title">Master the Art of Elegance</h1>
+            <p class="hero-subtitle">Curated programs for discerning individuals</p>
+        </div>
+    </section>
 
-  <!-- HERO SECTION -->
-  <section class="courses-hero glass-card neon-frame fade-target reveal parallax-layer" data-speed="2">
-    <h1>
-      <span class="typewriter" data-text="Our Driving Courses" data-speed="55"></span>
-    </h1>
-    <p>Explore our range of courses designed for every driver’s journey.</p>
-  </section>
+    <!-- Course Filter -->
+    <section class="course-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="luxury">Luxury Skills</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="elegance">Elegance</button>
+            </div>
+        </div>
+    </section>
 
-  <!-- COURSE CARDS -->
-  <section class="courses-list fade-target reveal">
-    <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="2">
-      <h2>Beginner Course <span class="icon">🛣️</span></h2>
-      <ul>
-        <li>Step-by-step instruction</li>
-        <li>Vehicle control basics</li>
-        <li>Traffic laws &amp; safety</li>
-      </ul>
-      <button class="btn btn-glow glow-on-hover ripple">Enroll Now</button>
-    </div>
+    <!-- Course Grid -->
+    <section class="course-grid">
+        <div class="container">
+            <div class="grid-container">
+                <!-- Course 1 -->
+                <div class="course-card" data-category="luxury">
+                    <div class="course-badge">Most Enrolled</div>
+                    <div class="course-img">
+                        <img src="assets/images/course1.jpg" alt="Luxury Etiquette">
+                    </div>
+                    <div class="course-info">
+                        <h3>The Art of Luxury Etiquette</h3>
+                        <div class="course-meta">
+                            <span><i class="fas fa-star gold-icon"></i> 4.9</span>
+                            <span><i class="fas fa-users gold-icon"></i> 120+</span>
+                        </div>
+                        <a href="#" class="btn-gold-outline">Enroll Now</a>
+                    </div>
+                </div>
 
-    <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="3">
-      <h2>Intermediate Course <span class="icon">🔄</span></h2>
-      <ul>
-        <li>City &amp; highway driving</li>
-        <li>Defensive techniques</li>
-        <li>Complex traffic scenarios</li>
-      </ul>
-      <button class="btn btn-glow glow-on-hover ripple">Enroll Now</button>
-    </div>
+                <!-- Course 2 -->
+                <div class="course-card" data-category="branding">
+                    <div class="course-img">
+                        <img src="assets/images/course2.jpg" alt="Personal Branding">
+                    </div>
+                    <div class="course-info">
+                        <h3>Elite Personal Branding</h3>
+                        <div class="course-meta">
+                            <span><i class="fas fa-star gold-icon"></i> 4.8</span>
+                            <span><i class="fas fa-users gold-icon"></i> 85+</span>
+                        </div>
+                        <a href="#" class="btn-gold-outline">Enroll Now</a>
+                    </div>
+                </div>
 
-    <div class="card glass-card neon-frame fade-in floating-icon pulse-hover" data-speed="4">
-      <h2>Advanced Course <span class="icon">🏁</span></h2>
-      <ul>
-        <li>Night driving</li>
-        <li>Adverse weather skills</li>
-        <li>Emergency maneuvers</li>
-      </ul>
-      <button class="btn btn-glow glow-on-hover ripple">Enroll Now</button>
-    </div>
-  </section>
+                <!-- 6 total courses in grid -->
+            </div>
+        </div>
+    </section>
 
-  <!-- SPECIALTY COURSES -->
-  <section class="specials glass-card fade-target reveal parallax-layer" data-speed="2">
-    <h2>
-      <span class="typewriter" data-text="Specialty Add-ons" data-speed="60"></span>
-    </h2>
-    <ul>
-      <li class="pulse-hover">Parallel Parking Mastery</li>
-      <li class="pulse-hover">Eco-Driving Techniques</li>
-      <li class="pulse-hover">Test Prep Crash Course</li>
-    </ul>
-  </section>
+    <!-- Testimonial Strip -->
+    <section class="testimonial-strip">
+        <div class="container">
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <p>"Maspala's etiquette course transformed my professional presence."</p>
+                    <span>- Olivia R., Geneva</span>
+                </div>
+                <!-- More slides -->
+            </div>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer glass-card fade-in menu-blur">
-    <p>© 2025 Maspala Driving School. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- Footer (same as index.html) -->
 </body>
 </html>
