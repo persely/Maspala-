@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Testimonials | Maspala Driving School</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maspala | Testimonials</title>
+    <!-- Shared Head Content -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="background-dots"></canvas>
+    <!-- Page Loader -->
+    <!-- Navigation -->
 
-  <header class="header glass-box fade-in parallax-layer" data-speed="2">
-    <div class="logo floating-icon" data-speed="3">Maspala <span class="icon">🚗</span></div>
-       <nav>
-  <div class="logo">Maspala 🚗</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="courses.html">Courses</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero testimonials-hero">
+        <div class="hero-overlay"></div>
+        <div class="particles" id="particles-js"></div>
+        <div class="container">
+            <h1 class="hero-title">Stories That Shine</h1>
+            <p class="hero-subtitle">Hear from our distinguished members</p>
+            <button id="music-toggle" class="btn-gold-outline">
+                <i class="fas fa-music"></i> Ambient Music
+            </button>
+        </div>
+    </section>
 
-  <section class="testimonials-hero glass-card neon-frame fade-target reveal">
-    <h1>
-      <span class="typewriter" data-text="Student Testimonials" data-speed="60"></span>
-    </h1>
-    <p>Real words from real students who mastered the road with Maspala.</p>
-  </section>
+    <!-- Testimonial Carousel -->
+    <section class="testimonial-carousel">
+        <div class="container">
+            <h2 class="section-title">Our Members Speak</h2>
+            <div class="carousel-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star gold-icon"></i>
+                        <i class="fas fa-star gold-icon"></i>
+                        <i class="fas fa-star gold-icon"></i>
+                        <i class="fas fa-star gold-icon"></i>
+                        <i class="fas fa-star gold-icon"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The branding course elevated my social presence beyond expectations. Worth every penny."
+                    </p>
+                    <div class="client-info">
+                        <img src="assets/images/client1.jpg" alt="Sophia K.">
+                        <div>
+                            <h4>Sophia K.</h4>
+                            <span>Lifestyle Influencer</span>
+                        </div>
+                    </div>
+                </div>
 
-  <section class="testimonials-list glass-card fade-target reveal">
-    <div class="card glass-box fade-in pulse-hover">
-      <p>"Absolutely the best experience! The instructors were calm, knowledgeable, and patient."</p>
-      <span>- Thando M.</span>
-    </div>
+                <!-- 4 more testimonials -->
+            </div>
+        </div>
+    </section>
 
-    <div class="card glass-box fade-in pulse-hover">
-      <p>"I went from being afraid to even touch the steering wheel to confidently passing my test!"</p>
-      <span>- Nthabiseng D.</span>
-    </div>
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <h2 class="section-title">Success Journeys</h2>
+            <div class="story-grid">
+                <div class="story-card">
+                    <div class="story-img" style="background-image: url('assets/images/success1.jpg');">
+                        <div class="play-btn">
+                            <i class="fas fa-play gold-icon"></i>
+                        </div>
+                    </div>
+                    <h3>From Corporate to Luxury Host</h3>
+                    <p>How Michael transformed his career</p>
+                </div>
+                <!-- 2 more stories -->
+            </div>
+        </div>
+    </section>
 
-    <div class="card glass-box fade-in pulse-hover">
-      <p>"Affordable, flexible, and super professional. Highly recommend Maspala to anyone!"</p>
-      <span>- Sipho Z.</span>
-    </div>
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Be Our Next Success Story</h2>
+            <a href="courses.html" class="btn-gold">Begin Your Journey</a>
+        </div>
+    </section>
 
-    <div class="card glass-box fade-in pulse-hover">
-      <p>"The typewriter effects, the energy, the vibe — even their website feels like it’s driving!"</p>
-      <span>- Jason L.</span>
-    </div>
-  </section>
-
-  <footer class="footer glass-card fade-in menu-blur">
-    <p>© 2025 Maspala Driving School. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- Footer -->
 </body>
 </html>
