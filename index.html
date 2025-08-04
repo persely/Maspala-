@@ -1,66 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Maspala Driving School | Master The Road</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maspala | Where Elegance Meets Purpose</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <canvas id="background-dots"></canvas>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
 
-  <header class="header glass-box fade-in parallax-layer" data-speed="2">
-    <div class="logo floating-icon" data-speed="3">Maspala <span class="icon">🚗</span></div>
-    <nav>
-  <div class="logo">Maspala 🚗</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="courses.html">Courses</a></li>
-    <li><a href="testimonials.html">Testimonials</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-  </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Maspala<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a>
+                <div class="nav-indicator"></div>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-  <main>
     <!-- Hero Section -->
-    <section class="hero glass-card neon-frame fade-target reveal">
-      <h1>
-        <span class="typewriter" data-text="Drive With Confidence, Drive With Maspala." data-speed="60"></span>
-      </h1>
-      <p>Your journey to freedom, independence, and safety on the road begins here.</p>
-      <a href="courses.html" class="btn btn-glow glow-on-hover ripple pulse-hover">Explore Courses</a>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="particles" id="particles-js"></div>
+        <div class="container">
+            <h1 class="hero-title">Where Elegance Meets Purpose</h1>
+            <p class="hero-subtitle">Discover the art of refined living through our exclusive programs</p>
+            <a href="#about" class="btn-gold">Get Started</a>
+        </div>
+        <div class="scroll-down">
+            <span></span>
+        </div>
     </section>
 
-    <!-- Highlights / Services -->
-    <section class="highlights glass-card fade-target reveal">
-      <div class="card glass-card neon-frame fade-in floating-icon" data-speed="2">
-        <h2><span class="icon">✅</span> Certified Instructors</h2>
-        <p>Our instructors are calm, qualified, and experienced to teach all types of learners.</p>
-      </div>
-      <div class="card glass-card neon-frame fade-in floating-icon" data-speed="3">
-        <h2><span class="icon">💼</span> Packages For Everyone</h2>
-        <p>From hourly lessons to full license preparation programs — we’ve got you covered.</p>
-      </div>
-      <div class="card glass-card neon-frame fade-in floating-icon" data-speed="4">
-        <h2><span class="icon">📍</span> Based in Limpopo</h2>
-        <p>We proudly serve our local communities with heart and reliability.</p>
-      </div>
+    <!-- Features Section -->
+    <section class="features" id="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Maspala</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Luxury Courses</h3>
+                    <p>Curated programs designed for those who demand excellence in every aspect of life.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <h3>Real Testimonials</h3>
+                    <p>Hear from our elite members who have transformed their lives with our guidance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Elite Support</h3>
+                    <p>24/7 concierge-level support for all our members, because excellence never sleeps.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta glass-card neon-frame fade-target reveal">
-      <h2><span class="typewriter" data-text="Start Your Driving Journey Today." data-speed="75"></span></h2>
-      <p>Booking is fast and easy — we’re ready when you are.</p>
-      <a href="contact.html" class="btn btn-glow glow-on-hover ripple pulse-hover">Contact Us</a>
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Join the Elite?</h2>
+            <p>Begin your journey towards refined living today.</p>
+            <a href="courses.html" class="btn-gold">Join the Elite</a>
+        </div>
     </section>
-  </main>
 
-  <footer class="footer glass-card fade-in menu-blur">
-    <p>© 2025 Maspala Driving School. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Maspala</h3>
+                    <p>Redefining luxury learning for those who dare to stand out.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> contact@maspala.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Maspala. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-  <script src="script.js"></script>
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-rocket"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </body>
 </html>
