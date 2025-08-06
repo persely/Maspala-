@@ -3,18 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background: linear-gradient(to bottom right, #1f4037, #99f2c8);
-  color: #fff;
+  background: linear-gradient(135deg, #004d00, #00cc66, #004d00);
+  color: white;
   overflow-x: hidden;
-  margin: 0;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* --- Header / Nav --- */
@@ -35,15 +30,6 @@ body {
   text-shadow: 0 0 10px gold;
 }
 
-.nav-icons {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  justify-content: center;
-  margin-bottom: 3rem;
-  padding: 0;
-}
-
 .nav-icons a {
   margin: 0 0.8rem;
   font-size: 1.5rem;
@@ -54,16 +40,6 @@ body {
 .nav-icons a:hover {
   transform: scale(1.2);
   color: gold;
-}
-
-.nav-icons li a img {
-  width: 28px;
-  height: 28px;
-  transition: transform 0.3s ease;
-}
-
-.nav-icons li a:hover img {
-  transform: scale(1.2);
 }
 
 /* --- Hero --- */
@@ -103,7 +79,7 @@ body {
   transform: scale(1.05);
 }
 
-/* --- Features Section --- */
+/* --- Features --- */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -125,7 +101,64 @@ body {
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
 }
 
-/* --- Shared Card Styling --- */
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* For fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cursor trail */
+#cursor-trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 12px gold;
+  transition: transform 0.1s ease;
+}
+
+/* Button hover glow */
+.glow-btn {
+  transition: all 0.3s ease;
+}
+.glow-btn.hovered {
+  box-shadow: 0 0 20px 5px gold;
+  transform: scale(1.05);
+}
+
+/* On-load animation starter */
+body.loaded .fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #1f4037, #99f2c8);
+  color: #fff;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -149,52 +182,31 @@ body {
   box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3);
 }
 
-/* --- Footer --- */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  opacity: 0.8;
+h1, h2 {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* --- Fade & Hover Effects --- */
-.fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding: 0;
 }
 
-.glow-btn {
-  transition: all 0.3s ease;
-}
-.glow-btn.hovered {
-  box-shadow: 0 0 20px 5px gold;
-  transform: scale(1.05);
+.nav-icons li a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
 }
 
-body.loaded .fade-in {
-  opacity: 1;
-  transform: translateY(0);
+.nav-icons li a:hover img {
+  transform: scale(1.2);
 }
 
-/* --- Cursor Trail --- */
-#cursor-trail {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background: gold;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  box-shadow: 0 0 12px gold;
-  transition: transform 0.1s ease;
-}
-
-/* --- About Page --- */
+/* ========== ABOUT PAGE SECTION ========== */
 .about-container {
   display: flex;
   flex-direction: column;
@@ -254,9 +266,4 @@ body.loaded .fade-in {
   font-size: 1rem;
   line-height: 1.6;
   color: #e5e5e5;
-}
-
-h1, h2 {
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
