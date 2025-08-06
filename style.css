@@ -1,485 +1,262 @@
-/* === RESET & BASE === */
-• {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+/* --- Reset & Base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
+
 body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-background: radial-gradient(circle at center, #0f0f0f, #060606);
-color: #fff;
-overflow-x: hidden;
-line-height: 1.6;
+  background: linear-gradient(to bottom right, #1f4037, #99f2c8);
+  color: #fff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-/* === GLASSMORPHISM CONTAINERS === */
-section, .card, .glass-box {
-background: rgba(255, 255, 255, 0.05);
-backdrop-filter: blur(15px);
--webkit-backdrop-filter: blur(15px);
-border: 1px solid rgba(255, 255, 255, 0.1);
-border-radius: 16px;
-padding: 2rem;
-margin: 2rem auto;
-max-width: 1000px;
-box-shadow: 0 0 20px rgba(0, 255, 100, 0.2);
+
+/* --- Header / Nav --- */
+.glass-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-/* === BUTTONS === */
-button, .btn {
-background: linear-gradient(135deg, #22ff88, #00cc66);
-color: #000;
-border: none;
-padding: 1rem 2rem;
-border-radius: 50px;
-cursor: pointer;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-font-weight: bold;
-text-transform: uppercase;
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: gold;
+  text-shadow: 0 0 10px gold;
 }
-button:hover, .btn:hover {
-transform: scale(1.05);
-box-shadow: 0 0 10px #22ff88;
+
+.nav-icons {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding: 0;
 }
-/* === NAVBAR === */
-.header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background: rgba(0, 255, 100, 0.05);
-backdrop-filter: blur(10px);
-padding: 1rem 2rem;
-position: sticky;
-top: 0;
-z-index: 1000;
-border-bottom: 1px solid rgba(255,255,255,0.1);
+
+.nav-icons a {
+  margin: 0 0.8rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
 }
-.navbar a {
-margin-left: 2rem;
-text-decoration: none;
-color: #22ff88;
-font-weight: 600;
-transition: color 0.3s ease;
+
+.nav-icons a:hover {
+  transform: scale(1.2);
+  color: gold;
 }
-.navbar a:hover, .navbar a.active {
-color: #ffffff;
+
+.nav-icons li a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
 }
-/* === FUTURISTIC ANIMATIONS === */
+
+.nav-icons li a:hover img {
+  transform: scale(1.2);
+}
+
+/* --- Hero --- */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.gradient-heading {
+  font-size: 3rem;
+  background: linear-gradient(to right, #fff700, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtagline {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: gold;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 10px gold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+}
+
+/* --- Features Section --- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+/* --- Shared Card Styling --- */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Footer --- */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* --- Fade & Hover Effects --- */
 .fade-in {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity 1s ease, transform 1s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
 }
 .fade-in.visible {
-opacity: 1;
-transform: translateY(0);
-}
-.portal {
-animation: pulsePortal 3s infinite ease-in-out;
-}
-@keyframes pulsePortal {
-0%, 100% {
-box-shadow: 0 0 10px #22ff88;
-}
-50% {
-box-shadow: 0 0 30px #22ff88;
-}
-}
-/* === ICON STYLE === */
-.icon {
-width: 50px;
-height: 50px;
-background: radial-gradient(circle, #22ff88, #00cc66);
-border-radius: 50%;
-box-shadow: 0 0 15px #22ff88;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: transform 0.4s ease;
-}
-.icon:hover {
-transform: scale(1.2) rotate(10deg);
-}
-.ripple {
-position: absolute;
-border-radius: 50%;
-background: rgba(255, 255, 255, 0.5);
-animation: ripple-animation 0.6s linear;
-pointer-events: none;
-transform: scale(0);
-}
-@keyframes ripple-animation {
-to {
-transform: scale(4);
-opacity: 0;
-}
-}
-button, .btn {
-position: relative;
-overflow: hidden;
-}
-/* === Portal Transition Effect === */
-body.portal-enter {
-opacity: 0;
-transform: scale(1.2) rotateX(20deg);
-transition: all 1s ease;
-}
-body {
-transition: all 1s ease;
-background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
-color: #e0e0e0;
-overflow-x: hidden;
-}
-/* === Glowing Hover Button === */
-button, .glow-on-hover {
-position: relative;
-border: none;
-background: #00ffcc;
-color: #000;
-padding: 10px 20px;
-font-weight: bold;
-cursor: pointer;
-overflow: hidden;
-border-radius: 8px;
-transition: all 0.3s ease;
-}
-button::before, .glow-on-hover::before {
-content: '';
-position: absolute;
-top: var(--y, 50%);
-left: var(--x, 50%);
-width: 0;
-height: 0;
-background: rgba(255, 255, 255, 0.2);
-border-radius: 50%;
-transform: translate(-50%, -50%);
-transition: width 0.4s ease, height 0.4s ease;
-}
-button:hover::before, .glow-on-hover:hover::before {
-width: 200px;
-height: 200px;
-}
-/* === Fade-In Scroll Animation === */
-section, .reveal {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity 1s ease, transform 1s ease;
-}
-section.fade-in, .reveal.fade-in {
-opacity: 1;
-transform: translateY(0);
-}
-/* === Ripple Click Effect === */
-.ripple {
-position: fixed;
-width: 30px;
-height: 30px;
-background: rgba(0, 255, 150, 0.3);
-border-radius: 50%;
-pointer-events: none;
-animation: ripple-fade 0.6s ease-out;
-z-index: 9999;
-}
-@keyframes ripple-fade {
-from {
-transform: scale(1);
-opacity: 1;
-}
-to {
-transform: scale(10);
-opacity: 0;
-}
-}
-/* === 3D Floating Icons === */
-.floating-icon {
-transition: transform 0.2s ease;
-will-change: transform;
-}
-/* === TYPEWRITER EFFECT === */
-.typewriter {
-font-family: 'Courier New', monospace;
-white-space: nowrap;
-overflow: hidden;
-border-right: 2px solid #00ffee;
-display: inline-block;
-animation: blink 0.8s infinite;
-}
-@keyframes blink {
-50% { border-color: transparent; }
-}
-/* === CURSOR TRAIL === */
-.cursor-trail {
-position: fixed;
-width: 8px;
-height: 8px;
-border-radius: 50%;
-pointer-events: none;
-z-index: 9999;
-animation: trailFade 0.5s ease-out;
-}
-@keyframes trailFade {
-from { opacity: 1; transform: scale(1); }
-to { opacity: 0; transform: scale(4); }
-}
-/* === PARALLAX LAYERS === */
-.parallax-layer {
-position: absolute;
-transition: transform 0.2s ease;
-will-change: transform;
-z-index: 1;
-}
-/* === FLOATING DOTS CANVAS === */
-#background-dots {
-position: fixed;
-top: 0;
-left: 0;
-z-index: 0;
-width: 100vw;
-height: 100vh;
-pointer-events: none;
-}
-/* === BLUR REVEAL MENU === */
-.menu-blur {
-backdrop-filter: blur(0px);
-transition: backdrop-filter 0.6s ease;
-}
-.menu-blur.menu-active {
-backdrop-filter: blur(8px);
-}
-.ripple {
-position: relative;
-overflow: hidden;
-}
-.ripple-effect {
-position: absolute;
-width: 100px;
-height: 100px;
-background: rgba(255, 255, 255, 0.4);
-border-radius: 50%;
-pointer-events: none;
-transform: scale(0);
-animation: rippleAnim 0.6s linear;
-}
-@keyframes rippleAnim {
-to {
-transform: scale(4);
-opacity: 0;
-}
-}
-.ripple {
-position: relative;
-overflow: hidden;
-}
-.ripple-effect {
-position: absolute;
-width: 100px;
-height: 100px;
-background: rgba(255, 255, 255, 0.4);
-border-radius: 50%;
-pointer-events: none;
-transform: scale(0);
-animation: rippleAnim 0.6s linear;
-}
-@keyframes rippleAnim {
-to {
-transform: scale(4);
-opacity: 0;
-}
-}
-.pulse {
-animation: pulseEffect 0.6s ease-in-out;
-}
-@keyframes pulseEffect {
-0% { transform: scale(1); }
-50% { transform: scale(1.1); }
-100% { transform: scale(1); }
-}
-:root {
---glow-color: #00ffae;
-}
-body {
-background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-color: #fff;
-font-family: 'Segoe UI', sans-serif;
-overflow-x: hidden;
-}
-.glass-card {
-background: rgba(255, 255, 255, 0.05);
-backdrop-filter: blur(20px);
-border-radius: 20px;
-padding: 20px;
-box-shadow: 0 0 40px rgba(0, 255, 174, 0.2);
-transition: all 0.3s ease;
-}
-.btn-glow {
-background: none;
-border: 2px solid var(--glow-color);
-padding: 10px 20px;
-border-radius: 30px;
-color: var(--glow-color);
-text-transform: uppercase;
-position: relative;
-z-index: 1;
-overflow: hidden;
-cursor: pointer;
-}
-.btn-glow::before {
-content: "";
-position: absolute;
-top: var(--y, 0);
-left: var(--x, 0);
-transform: translate(-50%, -50%);
-width: 0;
-height: 0;
-background: var(--glow-color);
-opacity: 0.1;
-border-radius: 50%;
-pointer-events: none;
-transition: width 0.4s ease, height 0.4s ease;
-}
-.btn-glow:hover::before {
-width: 200px;
-height: 200px;
-}
-.ripple {
-position: relative;
-overflow: hidden;
-}
-.ripple-effect {
-position: absolute;
-width: 100px;
-height: 100px;
-background: rgba(255, 255, 255, 0.4);
-border-radius: 50%;
-pointer-events: none;
-transform: scale(0);
-animation: rippleAnim 0.6s linear;
-}
-@keyframes rippleAnim {
-to {
-transform: scale(4);
-opacity: 0;
-}
-}
-.pulse-hover:hover {
-animation: pulseEffect 0.6s ease-in-out;
-}
-@keyframes pulseEffect {
-0% { transform: scale(1); }
-50% { transform: scale(1.1); }
-100% { transform: scale(1); }
-}
-.fade-target {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-in {
-opacity: 1 !important;
-transform: translateY(0) !important;
-}
-:root {
---glow-color: #00ffae;
-}
-/* Glass effect card */
-.glass-card {
-background: rgba(255, 255, 255, 0.05);
-backdrop-filter: blur(20px);
-border-radius: 20px;
-padding: 20px;
-box-shadow: 0 0 40px rgba(0, 255, 174, 0.2);
-transition: all 0.3s ease;
-}
-/* Button Glow */
-.btn-glow {
-background: none;
-border: 2px solid var(--glow-color);
-padding: 10px 20px;
-border-radius: 30px;
-color: var(--glow-color);
-text-transform: uppercase;
-position: relative;
-z-index: 1;
-overflow: hidden;
-cursor: pointer;
-}
-.btn-glow::before {
-content: "";
-position: absolute;
-top: var(--y, 0);
-left: var(--x, 0);
-transform: translate(-50%, -50%);
-width: 0;
-height: 0;
-background: var(--glow-color);
-opacity: 0.1;
-border-radius: 50%;
-pointer-events: none;
-transition: width 0.4s ease, height 0.4s ease;
-}
-.btn-glow:hover::before {
-width: 200px;
-height: 200px;
-}
-/* Ripple Effect */
-.ripple {
-position: relative;
-overflow: hidden;
-}
-.ripple-effect {
-position: absolute;
-width: 100px;
-height: 100px;
-background: rgba(255, 255, 255, 0.4);
-border-radius: 50%;
-pointer-events: none;
-transform: scale(0);
-animation: rippleAnim 0.6s linear;
-}
-@keyframes rippleAnim {
-to {
-transform: scale(4);
-opacity: 0;
-}
-}
-/* Hover pulse */
-.pulse-hover:hover {
-animation: pulseEffect 0.6s ease-in-out;
-}
-@keyframes pulseEffect {
-0% { transform: scale(1); }
-50% { transform: scale(1.1); }
-100% { transform: scale(1); }
-}
-/* Fade In Scroll */
-.fade-target {
-opacity: 0;
-transform: translateY(30px);
-transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-in {
-opacity: 1 !important;
-transform: translateY(0) !important;
-}
-/* Neon Section Border */
-.neon-frame {
-border: 2px solid var(--glow-color);
-border-radius: 20px;
-padding: 20px;
-box-shadow: 0 0 15px var(--glow-color);
+  opacity: 1;
+  transform: translateY(0);
 }
 
+.glow-btn {
+  transition: all 0.3s ease;
+}
+.glow-btn.hovered {
+  box-shadow: 0 0 20px 5px gold;
+  transform: scale(1.05);
+}
 
+body.loaded .fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+/* --- Cursor Trail --- */
+#cursor-trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 12px gold;
+  transition: transform 0.1s ease;
+}
 
+/* --- About Page --- */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
 
+.about-title {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, gold, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+  text-align: center;
+}
 
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
 
+.about-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+}
 
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3);
+}
 
+.about-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #ffd700, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+}
 
-
-
-
-
-
-
+h1, h2 {
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
